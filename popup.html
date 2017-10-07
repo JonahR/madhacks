@@ -10,30 +10,42 @@
     <style type="text/css">
       body {
         margin: 10px;
+        background-color: #F5F5F5;
       }
 
       h1 {
-        font-size: 15px;
         text-align: center;
+        font-size: 15px;
       }
 
       h2 {
-        font-size: 12px;
         text-align: center;
+        font-size: 12px;
+        color: #222222;
+      }
+
+      img{
+        height: auto;
+        width: 150px;
       }
       
       a{
         outline: none;
+        text-decoration: none;
+        color:#666666; 
+      }
+      a:hover{
+        opacity: 0.75;
       }
 
-      #large_container {
+      .large_container {
         display: flex;
       }
 
-      #container {
+      .container {
         display: block;
         margin: 10px;
-        margin-top: 0px; 
+        margin-top: 0px;
       }
     </style>
 
@@ -48,34 +60,35 @@
 
   <body>
     <h1>Related Articles</h1>
-    <div id="large_container">
-      <div id="container">
-        <h2> Ipsum dolor sit amet </h2>
-        <a href="http://www.cnn.com/2017/10/07/politics/rex-tillerson-donald-trump-diplomacy/index.html">
-          <img src="Images/thumbnail1.jpg" height = 150px, width = 150px/>
-        </a>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-          Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
-          Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?<p>
-      </div>
-      <div id="container">
-        <h2> Ipsum dolor sit amet </h2>
-        <a href="http://www.cnn.com/2017/10/07/us/hurricane-nate-forecast/index.html">
-          <img src="Images/thumbnail2.jpg" height = 150px, width = 150px/>
-        </a>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    <div class="large_container">
+      <a href="http://www.cnn.com/2017/10/07/politics/rex-tillerson-donald-trump-diplomacy/index.html">
+        <div class="container">
+          <h2> Ipsum dolor sit amet </h2>
+          <img src="Images/thumbnail1.jpg"/>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
-            Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?<p>
-      </div>
-      <div id="container">
-        <h2> Ipsum dolor sit amet </h2>
-        <a href="http://www.cnn.com/2017/10/06/us/unknowable-stephen-paddock-and-the-mystery-motive/index.html">
-          <img src="Images/thumbnail3.jpg" height = 150px, width = 150px/>
-        </a>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
-            Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?<p>
-      </div>
+            Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?</p>
+        </div>
+      </a>
+      <a href="http://www.cnn.com/2017/10/07/us/hurricane-nate-forecast/index.html">
+        <div class="container">
+            <h2> Ipsum dolor sit amet </h2>
+            <img src="Images/thumbnail2.jpg"/>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
+              Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?</p>
+        </div>
+      </a>
+      <a href="http://www.cnn.com/2017/10/06/us/unknowable-stephen-paddock-and-the-mystery-motive/index.html">
+        <div class="container">
+            <h2> Ipsum dolor sit amet </h2>
+            <img src="Images/thumbnail3.jpg"/>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
+              Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?</p>
+          
+        </div>
+      </a>
     </div>
   </body>
 </html>
