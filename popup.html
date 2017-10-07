@@ -10,17 +10,30 @@
     <style type="text/css">
       body {
         margin: 10px;
-        white-space: nowrap;
       }
 
       h1 {
         font-size: 15px;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 12px;
+        text-align: center;
+      }
+      
+      a{
+        outline: none;
+      }
+
+      #large_container {
+        display: flex;
       }
 
       #container {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
+        display: block;
+        margin: 10px;
+        margin-top: 0px; 
       }
     </style>
 
@@ -34,16 +47,37 @@
   </head>
 
   <body>
-    <h1>Background Color Changer</h1>
-    <div id="container">
-      <span>Choose a color</span>
-      <select id="dropdown">
-        <option selected disabled hidden value=''></option>
-        <option value="white">White</option>
-        <option value="pink">Pink</option>
-        <option value="green">Green</option>
-        <option value="yellow">Yellow</option>
-      </select>
+    <h1>Related Articles</h1>
+    <div id="large_container">
+      <div id="container">
+        <h2> Ipsum dolor sit amet </h2>
+        <a href="http://www.cnn.com/2017/10/07/politics/rex-tillerson-donald-trump-diplomacy/index.html">
+          <img src="Images/thumbnail1.jpg" height = 150px, width = 150px/>
+        </a>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
+          Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?<p>
+      </div>
+      <div id="container">
+        <h2> Ipsum dolor sit amet </h2>
+        <a href="http://www.cnn.com/2017/10/07/us/hurricane-nate-forecast/index.html">
+          <img src="Images/thumbnail2.jpg" height = 150px, width = 150px/>
+        </a>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
+            Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?<p>
+      </div>
+      <div id="container">
+        <h2> Ipsum dolor sit amet </h2>
+        <a href="http://www.cnn.com/2017/10/06/us/unknowable-stephen-paddock-and-the-mystery-motive/index.html">
+          <img src="Images/thumbnail3.jpg" height = 150px, width = 150px/>
+        </a>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
+            Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?<p>
+      </div>
     </div>
   </body>
 </html>
+
+
