@@ -21,17 +21,31 @@ chrome.runtime.sendMessage({requestNews: true}, function(response) {
     buildNews(response);
 })
 
-// function buildNews(newsItem){
-//     // Changes all the urls
-//     document.getElementById('story_one').href= newsItem.values[0].url;
-//     document.getElementById('story_two').href= newsItem.values[1].url;
-//     document.getElementById('story_three').href= newsItem.values[2].url;
-//     // Changes the titles
-//     document.getElementsByTagName('h2')[0].innerHTML = newsItem.values
-//     document.getElementsByTagName('h2')[1].innerHTML =
-//     document.getElementsByTagName('h2')[2].innerHTML =
-//     // Changes the descrpition
-//     // Changes the picture
-// }
+function buildNews(newsItem){
 
-// buildNews(newsObj)
+    for(var i = 0; i < 3; i++){
+        document.getElementsByTagName('a')[i].href = newsItem.values[i].url;
+        document.getElementsByTagName('h2')[i].innerHTML = newsItem.values[i].name;
+        document.getElementsByTagName('p')[i].innerHTML = newsItem.values[i].description;
+        document.getElementsByTagName('img')[i].src = newsItem.values[i].image.thumbnail.contentURL;
+    }
+    
+    // // Changes all the urls
+    // document.getElementsByTagName('a')[0].href = newsItem.values[0].url;
+    // document.getElementsByTagName('a')[1].href = newsItem.values[1].url;
+    // document.getElementsByTagName('a')[2].href = newsItem.values[2].url;
+    // // Changes the titles
+    // document.getElementsByTagName('h2')[0].innerHTML = newsItem.values[0].name;
+    // document.getElementsByTagName('h2')[1].innerHTML = newsItem.values[1].name;
+    // document.getElementsByTagName('h2')[2].innerHTML = newsItem.values[2].name;
+    // // Changes the descrpition
+    // document.getElementsByTagName('p')[0].innerHTML = newsItem.values[0].description;
+    // document.getElementsByTagName('p')[1].innerHTML = newsItem.values[1].description;
+    // document.getElementsByTagName('p')[2].innerHTML = newsItem.values[2].description;
+    // // Changes the picture
+    // document.getElementsByTagName('img')[0].src = newsItem.values[0].image.thumbnail.contentURL;
+    // document.getElementsByTagName('img')[1].src = newsItem.values[1].image.thumbnail.contentURL;
+    // document.getElementsByTagName('img')[2].src = newsItem.values[2].image.thumbnail.contentURL;
+}
+
+buildNews(newsObj)
