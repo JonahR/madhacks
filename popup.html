@@ -26,7 +26,7 @@
 
       img{
         height: auto;
-        width: 150px;
+        width: 125px;
       }
       
       a{
@@ -47,6 +47,7 @@
         margin: 10px;
         margin-top: 0px;
       }
+
     </style>
 
     <!--
@@ -55,42 +56,39 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
     -->
-    <script src="popup.js"></script>
   </head>
 
   <body>
     <h1>Related Articles</h1>
     <div class="large_container">
-      <a href="http://www.cnn.com/2017/10/07/politics/rex-tillerson-donald-trump-diplomacy/index.html">
+      
+      <a href="http://www.cnn.com" id="story_one">
         <div class="container">
-          <h2> Ipsum dolor sit amet </h2>
-          <img src="Images/thumbnail1.jpg"/>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
-            Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?</p>
+          <h2> CNN </h2>
+          <img src="Images/thumbnail1.png"/>
+          <p>Breaking News, Latest News and Videos</p>
         </div>
       </a>
-      <a href="http://www.cnn.com/2017/10/07/us/hurricane-nate-forecast/index.html">
+      
+      <a href="http://www.foxnews.com/" id="story_two">
         <div class="container">
-            <h2> Ipsum dolor sit amet </h2>
-            <img src="Images/thumbnail2.jpg"/>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
-              Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?</p>
+            <h2> FOX </h2>
+            <img src="Images/thumbnail2.png"/>
+            <p> Fox News - Breaking News Updates | Latest News Headlines | Photos &amp; News Videos </p>
         </div>
       </a>
-      <a href="http://www.cnn.com/2017/10/06/us/unknowable-stephen-paddock-and-the-mystery-motive/index.html">
+      
+      <a href="https://www.nytimes.com/" id="story_three">
         <div class="container">
-            <h2> Ipsum dolor sit amet </h2>
-            <img src="Images/thumbnail3.jpg"/>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              Fugit quo, id cum quidem molestias atque quas quod laudantium recusandae odit. 
-              Tenetur deleniti odit recusandae, facilis voluptatem sapiente velit ipsam unde?</p>
-          
+            <h2> The New York Times </h2>
+            <img src="Images/thumbnail3.png"/>
+            <p>The New York Times - Breaking News, World News &amp; Multimedia</p>
         </div>
       </a>
     </div>
   </body>
 </html>
+
+<script src="popup.js"></script>
 
 
