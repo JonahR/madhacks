@@ -21,4 +21,5 @@ chrome.runtime.onMessage.addListener(
   function getNewsObj() {
       return newsObj;
   }
+  
 
