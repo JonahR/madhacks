@@ -16,7 +16,7 @@ chrome.runtime.sendMessage({requestNews: true}, function(response) {
 })
 
 function buildNews(newsItem){
-
+    alert("working");
     for(var i = 0; i < 3; i++){
         document.getElementsByTagName('a')[i].href = newsItem.values[i].url;
         document.getElementsByTagName('h2')[i].innerHTML = newsItem.values[i].name;
@@ -41,5 +41,3 @@ function buildNews(newsItem){
     // document.getElementsByTagName('img')[1].src = newsItem.values[1].image.thumbnail.contentURL;
     // document.getElementsByTagName('img')[2].src = newsItem.values[2].image.thumbnail.contentURL;
 }
-
-buildNews(newsObj)
