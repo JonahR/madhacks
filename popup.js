@@ -11,13 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      loadNews(request.pageTitle);
-    });
-
 chrome.runtime.sendMessage({requestNews: true}, function(response) {
-    
     buildNews(response);
 })
 
