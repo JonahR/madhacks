@@ -11,19 +11,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+      loadNews(request.pageTitle);
+    });
 
+chrome.runtime.sendMessage({requestNews: true}, function(response) {
+    
+    buildNews(response);
+})
 
-function buildNews(newsItem){
-    // Changes all the urls
-    document.getElementById('story_one').href= newsItem.values[0].url;
-    document.getElementById('story_two').href= newsItem.values[1].url;
-    document.getElementById('story_three').href= newsItem.values[2].url;
-    // Changes the titles
-    document.getElementsByTagName('h2')[0].innerHTML =
-    document.getElementsByTagName('h2')[1].innerHTML =
-    document.getElementsByTagName('h2')[2].innerHTML =
-    // Changes the descrpition
-    // Changes the picture
-}
+// function buildNews(newsItem){
+//     // Changes all the urls
+//     document.getElementById('story_one').href= newsItem.values[0].url;
+//     document.getElementById('story_two').href= newsItem.values[1].url;
+//     document.getElementById('story_three').href= newsItem.values[2].url;
+//     // Changes the titles
+//     document.getElementsByTagName('h2')[0].innerHTML = newsItem.values
+//     document.getElementsByTagName('h2')[1].innerHTML =
+//     document.getElementsByTagName('h2')[2].innerHTML =
+//     // Changes the descrpition
+//     // Changes the picture
+// }
 
-buildNews(newsObj)
+// buildNews(newsObj)

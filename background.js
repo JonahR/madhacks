@@ -2,7 +2,11 @@ var newsObj = undefined;
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-      loadNews(request.pageTitle);
+      if (request.requestNews) {
+        sendResponse(newsObj)
+      } else {
+        loadNews(request.pageTitle); 
+      }
     });
   
   function loadNews(query) {
