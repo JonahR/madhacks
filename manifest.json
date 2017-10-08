@@ -19,5 +19,8 @@
       "matches": ["<all_urls>"],
       "js": ["jquery.js", "interpret.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
